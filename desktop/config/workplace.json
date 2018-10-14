@@ -1,0 +1,18 @@
+{
+  "name": "datanote-workplace",
+  "app": "Datanote Workplace",
+  "vendor": "Datagica",
+  "version": "v0",
+  "debug": true,
+  "api": {
+    "login": "anonymous",
+    "token": "a79d25669061db53354525b034390cd874e48a49",
+    "domain": "workplace"
+  },
+  "database": {
+    "port": 2424,
+    "username": "root",
+    "password": "hirejitsu",
+    "name": "workplace"
+  }
+}

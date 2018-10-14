@@ -1,0 +1,54 @@
+<!doctype html>
+<html class="intro">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Datanote</title>
+	<style>
+
+	/* fix for https://github.com/electron/electron/issues/4420 */
+  ::selection { background: rgba(99, 30, 160, 0.06); }
+
+	/* some css hacks, here becase the global css template didn't seem
+	 to be taken into account.. maybe it's already fixed? */
+
+	.blur { -webkit-filter: blur(4px); filter: blur(4px);}
+
+	.nestedItemInnerDivMulti > div { padding: 0px !important; }
+
+	.bootstrap-loader {
+		font-size: 22px;
+    font-weight: 300;
+    font-family: Roboto, sans-serif;
+    text-align: center;
+    line-height: 100vh;
+    color: #838ba2;
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.68);
+	}
+
+	</style>
+	<script>
+
+	const electron =  require('electron')
+
+  window.node = {
+    require:       require,
+    electron:      electron,
+    ipc:           electron.ipcRenderer,
+    notifier:      require("node-notifier"),
+		child_process: require('child_process'),
+    process:       process
+  }
+  </script>
+</head>
+<body>
+	<!-- trick to preload the font, fixes https://github.com/almende/vis/issues/171 -->
+	<p style="position: absolute; left: -20px;"><i class="fa fa-camera-retro"></i></p>
+	<div id="main">
+		<div class="bootstrap-loader">
+		  Loading things..
+	  </div>
+	</div>
+	<script src="dist/main.bundle.js"></script>
+</body>
+</html>
