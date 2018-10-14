@@ -3,7 +3,7 @@
 Datanote is an open-source application for named entity
 visualization.
 
-## Note from the developer
+## Warning
 
 Please be indulgent regarding the quality of the code.
 The whole thing started off as an experiment and proof of concept, when I did not know about React, Electron or MobX. 
@@ -15,4 +15,17 @@ Right now the project is **not funded** so I develop it
 during my spare time, and it is difficult to advance it
 as quickly as I would like to.
 
-In summary: **do not expect things to work as you expect out of the box. You will have to try to tweak some things by yourwelf, dig into the code, be patient etc..**
+In summary: **do not expect things to work out of the box as you would like. You will have to try to tweak some things by yourwelf, dig into the code, and be patient.**
+
+## Instructions
+
+### Installation for development
+
+#### Web App Frontend
+    $ cd app
+    $ npm i
+
+### Electron Node Backend
+
+    $ cd desktop
+    $ npm i
