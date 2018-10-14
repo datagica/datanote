@@ -1,0 +1,33 @@
+
+appId: com.datagica.datanote
+productName: Datanote
+copyright: Copyright © 2017 Julian Bilcke <julian.bilcke@datagica.com>
+compression: store
+
+asarUnpack:
+  - config/*.json
+  - node_modules/@datagica/orientdb-server/config
+  - node_modules/@datagica/orientdb-server/orientdb
+
+forceCodeSigning: true
+npmRebuild: true
+nodeGypRebuild: false
+
+mac:
+  publish: []
+  category: public.app-category.business
+
+win:
+  forceCodeSigning: false
+  target:
+    - nsis
+
+nsis:
+  oneClick: true
+  perMachine: false
+  deleteAppDataOnUninstall: false
+
+linux:
+  target:
+    - AppImage
+    - deb

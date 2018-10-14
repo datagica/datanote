@@ -25,7 +25,7 @@ In summary: **do not expect things to work out of the box as you would like. You
     $ cd app
     $ npm i
 
-### Electron Node Backend
+#### Electron Node Backend
 
     $ cd desktop
     $ npm i
