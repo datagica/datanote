@@ -1,0 +1,19 @@
+div.vis-tooltip {
+  padding: 0 20px;
+  white-space: inherit;
+  font-family: Roboto;
+  font-size: 11px;
+  color: rgb(84, 84, 88);
+  background-color: hsla(261, 34%, 96%, 0.91);
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid rgba(166,156,197,.2);
+  box-shadow: 3px 3px 10px rgba(0,0,0,.03);
+  width: 100px;
+}
+div.vis-tooltip h4 {
+  font-family: Roboto;
+  font-size: 13px;
+  letter-spacing: 0.3px;
+}

@@ -1,0 +1,279 @@
+.r-a-t {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.r-a-t, .r-a-t * {
+  box-sizing: border-box;
+}
+.r-a-t .add-wrapper {
+  position: absolute;
+  top: 10px;
+  left: calc(100% - 27px);
+  width: 37px;
+  height: 21px;
+  background: rgba(218, 217, 230, 0.95);
+  transition: all .3s ease;
+  transform: skew(19deg);
+  border: solid 1px rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+}
+.r-a-t .add-wrapper::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 13px;
+  top: 9px;
+  width: 11px;
+  height: 1px;
+  transform: skew(-19deg);
+  background: #a2a2a2;
+}
+.r-a-t .add-wrapper::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 18px;
+  top: 4px;
+  width: 1px;
+  height: 11px;
+  transform: skew(-19deg);
+  background: #a2a2a2;
+}
+.r-a-t .add-wrapper:hover {
+  background: #f3f3f3;
+  /* TODO: we need a darker color for when the button is pressed down,
+  for instance rgba(208, 207, 216, 0.95) */
+}
+.r-a-t .tab-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  padding-left: 15px;
+}
+.r-a-t .tab-wrapper.with-add {
+  width: calc(100% - 35px);
+}
+.r-a-t .tab-wrapper .tab-button {
+  position: absolute;
+  height: 27px;
+  user-select: none;
+}
+.r-a-t .tab-wrapper .tab-button:hover {
+  cursor: default;
+}
+.r-a-t .tab-wrapper .tab-button:not(.active):hover .tab,
+.r-a-t .tab-wrapper .tab-button:not(.active):hover .icon.loading,
+.r-a-t .tab-wrapper .tab-button:not(.active):hover .icon.loading .mask {
+  /*background: rgba(237, 235, 241, 1);*/
+  background: rgba(233, 233, 241, 0.82);
+}
+.r-a-t .tab-wrapper .tab-button:not(.active):hover .shadow {
+  background: linear-gradient(to right, transparent, rgb(218, 217, 230));
+}
+.r-a-t .tab-wrapper .tab-button.active {
+  z-index: 999 !important;
+}
+.r-a-t .tab-wrapper .tab-button.active .tab {
+  background: rgba(237, 235, 241, 1);
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 10px -5px;
+}
+.r-a-t .tab-wrapper .tab-button.active .text {
+  color: rgb(133, 119, 140);
+  text-shadow: rgb(255, 255, 255) 0px 0px 1px;
+}
+
+.r-a-t .tab-wrapper .tab-button.active .icon.loading,
+.r-a-t .tab-wrapper .tab-button.active .icon.loading .mask {
+  background: rgb(227, 226, 236);
+}
+.r-a-t .tab-wrapper .tab-button.active .shadow {
+  background: linear-gradient(to right, transparent, rgb(227, 226, 236));
+}
+.r-a-t .tab-wrapper .tab {
+  position: absolute;
+  left: 0;
+  top: -8px;
+  width: calc(100%);
+  height: 45px;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 4px;
+  padding: 0 30px;
+  background: rgb(218, 217, 230); /* rgba(227, 226, 236, 0); */
+  z-index: 0;
+  transition: all ease .3s;
+  user-select: none;
+  box-shadow: rgba(0, 0, 0, 0.67) 0px 0px 4px -2px;
+  transform: perspective(120px) rotateX(30deg);
+  border-radius: 5px;
+  margin: 8px 0px 0px 5px;
+}
+.r-a-t .tab-wrapper .text {
+  position: absolute;
+  left: 22px;
+  top: 10px;
+  text-align: center;
+  z-index: 999;
+  width: calc(100% - 30px);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(160, 151, 165);
+  text-shadow: rgb(255, 255, 255) 0 0 1px;
+  letter-spacing: 0.2px;
+  transition: all 0.3s ease;
+}
+.r-a-t .tab-wrapper .text.with-close {
+  width: calc(100% - 45px);
+}
+.r-a-t .tab-wrapper .text > * {
+  position: relative;
+  vertical-align: top;
+}
+.r-a-t .tab-wrapper .text .icon {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  margin-right: 8px;
+}
+.r-a-t .tab-wrapper .text .icon.loading {
+  margin-top: 2px;
+  width: 12px;
+  height: 12px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #049fd9;
+  border-radius: 50%;
+  background: #edebf1;
+  transform: rotateZ(30deg);
+  animation-name: IconLoading;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transition: all ease .3s;
+}
+.r-a-t .tab-wrapper .text .icon.loading .mask {
+  position: absolute;
+  left: -3px;
+  top: -3px;
+  width: 14px;
+  height: 14px;
+  background: #edebf1;
+  clip: rect(0px, 14px, 14px, 7px);
+    transition: all ease .3s;
+}
+.r-a-t .tab-wrapper .text .icon.warning {
+  margin-top: 2px;
+  width: 12px;
+  height: 12px;
+}
+.r-a-t .tab-wrapper .text .icon.warning::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 2px;
+  height: 8px;
+  background: red;
+}
+.r-a-t .tab-wrapper .text .icon.warning::after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  width: 2px;
+  height: 2px;
+  background: red;
+}
+.r-a-t .tab-wrapper .close {
+  position: absolute;
+  left: calc(100% - 24px);
+  top: 13px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  transform: rotateZ(45deg);
+  transition: all ease .3s;
+}
+.r-a-t .tab-wrapper .close:hover {
+  background: #ffffff;
+}
+.r-a-t .tab-wrapper .close:hover::before, .r-a-t .tab-wrapper .close:hover::after {
+  /*background: white;*/
+}
+.r-a-t .tab-wrapper .close::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 3px;
+  top: 7px;
+  width: 9px;
+  height: 1px;
+  background: #888;
+}
+.r-a-t .tab-wrapper .close::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 7px;
+  top: 3px;
+  width: 1px;
+  height: 9px;
+  background: #888;
+}
+.r-a-t .panel-wrapper {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 35px);
+  z-index: 998;
+  overflow: scroll;
+}
+.r-a-t .panel-wrapper .panel {
+  position: absolute;
+  display: none;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.r-a-t .panel-wrapper .panel.active {
+  display: block;
+  z-index: 1;
+}
+.r-a-t .tooltip {
+  display: none;
+  position: absolute;
+  left: 100px;
+  top: 40px;
+  z-index: 999;
+  padding: 5px 15px;
+  white-space: nowrap;
+  background-color: rgb(227, 226, 236);
+  color: #333;
+  font-size: 12px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  box-shadow: 1px 1px 2px rgba(206, 206, 206, 0.8);
+  opacity: .95;
+}
+
+@keyframes IconLoading {
+  from {
+    transform: rotateZ(30deg);
+  }
+  to {
+    transform: rotateZ(390deg);
+  }
+}

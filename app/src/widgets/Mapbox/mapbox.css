@@ -1,0 +1,16 @@
+
+/* keep the copyright, but with a nicer style */
+.mapboxgl-map .mapboxgl-control-container .mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+  padding: 2px 155px 10px 10px  !important;
+  height: 12px  !important;
+  background-color: rgba(255,255,255,0.5)  !important;
+  margin: 0px 10px 10px 0px  !important;
+  text-shadow: 0px 0px 1px white  !important;
+  font-family: 'Roboto'  !important;
+  font-size: 11px  !important;
+  opacity: 0.6  !important;
+}
+
+.mapboxgl-map .mapboxgl-control-container .mapboxgl-ctrl-attrib .mapbox-improve-map {
+  display: none !important;
+}

@@ -1,0 +1,24 @@
+
+
+/* HIREJITSU STYLE */
+
+.mfb-component__button--child {
+  // TODO make sub buttons them slightly small than the base button
+  // (like on Google Inbox or Calendar)
+  height: 45px;
+  width: 45px;
+
+  &.profileList,
+  &.singleProfile,
+  &.jobList{
+    // background-color: red;
+    display: none;
+  }
+
+}
+
+ul.profileList .profileList,
+ul.singleProfile .singleProfile,
+ul.jobList .jobList {
+  display: block;
+}

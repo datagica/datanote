@@ -1,0 +1,352 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Basic Ranking 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "display": "inline-block",
+        "float": "left",
+        "margin": "0px 0px 0px 0px",
+        "overflowX": "hidden",
+        "padding": "0px 0px 0px 0px",
+      }
+    }
+  >
+    <h3
+      style={
+        Object {
+          "color": "rgba(89, 83, 93, 0.8)",
+          "fontFamily": "Open Sans",
+          "fontSize": "12.2px",
+          "fontWeight": 600,
+          "letterSpacing": "0.2px",
+          "lineHeight": "18px",
+          "margin": "0px 0px 0px 0px",
+          "padding": "15px 0px 1px 26px",
+          "textShadow": "white 0px 0px 1px",
+          "textTransform": "uppercase",
+        }
+      }
+    >
+      Test
+    </h3>
+    <div
+      style={
+        Object {
+          "margin": "5px 8%",
+          "padding": "10px 15px",
+        }
+      }
+    >
+      <div
+        className="Flex"
+        style={
+          Object {
+            "WebkitAlignItems": "center",
+            "alignItems": "center",
+            "boxSizing": "border-box",
+            "display": "flex",
+            "height": "35px",
+            "margin": 0,
+            "msAlignItems": "center",
+            "padding": 0,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "alignSelf": "flex-start",
+              "color": "rgba(34, 32, 62, 0.760784)",
+              "fontFamily": "Open Sans",
+              "fontSize": "11.6px",
+              "fontWeight": "600",
+              "height": "35px",
+              "letterSpacing": "0.2px",
+              "lineHeight": "35px",
+              "overflow": "hidden",
+              "padding": "0px",
+              "textOverflow": "ellipsis",
+              "textShadow": "0px 0px 1px #ffffff",
+              "textTransform": "capitalize",
+              "whiteSpace": "nowrap",
+              "width": "160px",
+            }
+          }
+        >
+          Three
+        </div>
+        <div
+          style={
+            Object {
+              "background": "linear-gradient(rgba(255, 255, 255, 0.32) 0%, rgba(234, 234, 234, 0.12) 9%, rgba(218, 218, 218, 0.34) 100%)",
+              "borderRadius": "5px",
+              "boxShadow": "rgba(0, 0, 0, 0.26) 0px 1px 3px -1px inset",
+              "flexGrow": "1",
+              "height": "12px",
+              "margin": "0",
+              "overflow": "hidden",
+              "padding": "0",
+              "width": "50px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "background": "linear-gradient(rgb(192, 194, 208) 0%, rgb(149, 138, 208) 100%)",
+                "borderRadius": "2px",
+                "boxShadow": "rgba(0, 0, 0, 0.24) 0px 1px 0px 0px",
+                "height": "13px",
+                "margin": "0",
+                "padding": "0",
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+        <div
+          style={
+            Object {
+              "color": "rgba(34, 32, 62, 0.760784)",
+              "fontFamily": "Open Sans",
+              "fontSize": "11.6px",
+              "fontWeight": "600",
+              "height": "35px",
+              "letterSpacing": "0.2px",
+              "lineHeight": "35px",
+              "margin": "-1px 0px 0px 0px",
+              "padding": "0px 0px 0px 10px",
+              "textShadow": "0px 0px 1px #ffffff",
+              "textTransform": "capitalize",
+              "width": "20px",
+            }
+          }
+        >
+          100
+        </div>
+      </div>
+      <div
+        className="Flex"
+        style={
+          Object {
+            "WebkitAlignItems": "center",
+            "alignItems": "center",
+            "boxSizing": "border-box",
+            "display": "flex",
+            "height": "35px",
+            "margin": 0,
+            "msAlignItems": "center",
+            "padding": 0,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "alignSelf": "flex-start",
+              "color": "rgba(34, 32, 62, 0.760784)",
+              "fontFamily": "Open Sans",
+              "fontSize": "11.6px",
+              "fontWeight": "600",
+              "height": "35px",
+              "letterSpacing": "0.2px",
+              "lineHeight": "35px",
+              "overflow": "hidden",
+              "padding": "0px",
+              "textOverflow": "ellipsis",
+              "textShadow": "0px 0px 1px #ffffff",
+              "textTransform": "capitalize",
+              "whiteSpace": "nowrap",
+              "width": "160px",
+            }
+          }
+        >
+          One
+        </div>
+        <div
+          style={
+            Object {
+              "background": "linear-gradient(rgba(255, 255, 255, 0.32) 0%, rgba(234, 234, 234, 0.12) 9%, rgba(218, 218, 218, 0.34) 100%)",
+              "borderRadius": "5px",
+              "boxShadow": "rgba(0, 0, 0, 0.26) 0px 1px 3px -1px inset",
+              "flexGrow": "1",
+              "height": "12px",
+              "margin": "0",
+              "overflow": "hidden",
+              "padding": "0",
+              "width": "50px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "background": "linear-gradient(rgb(192, 194, 208) 0%, rgb(149, 138, 208) 100%)",
+                "borderRadius": "2px",
+                "boxShadow": "rgba(0, 0, 0, 0.24) 0px 1px 0px 0px",
+                "height": "13px",
+                "margin": "0",
+                "padding": "0",
+                "width": "50%",
+              }
+            }
+          />
+        </div>
+        <div
+          style={
+            Object {
+              "color": "rgba(34, 32, 62, 0.760784)",
+              "fontFamily": "Open Sans",
+              "fontSize": "11.6px",
+              "fontWeight": "600",
+              "height": "35px",
+              "letterSpacing": "0.2px",
+              "lineHeight": "35px",
+              "margin": "-1px 0px 0px 0px",
+              "padding": "0px 0px 0px 10px",
+              "textShadow": "0px 0px 1px #ffffff",
+              "textTransform": "capitalize",
+              "width": "20px",
+            }
+          }
+        >
+          50
+        </div>
+      </div>
+      <div
+        className="Flex"
+        style={
+          Object {
+            "WebkitAlignItems": "center",
+            "alignItems": "center",
+            "boxSizing": "border-box",
+            "display": "flex",
+            "height": "35px",
+            "margin": 0,
+            "msAlignItems": "center",
+            "padding": 0,
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "alignSelf": "flex-start",
+              "color": "rgba(34, 32, 62, 0.760784)",
+              "fontFamily": "Open Sans",
+              "fontSize": "11.6px",
+              "fontWeight": "600",
+              "height": "35px",
+              "letterSpacing": "0.2px",
+              "lineHeight": "35px",
+              "overflow": "hidden",
+              "padding": "0px",
+              "textOverflow": "ellipsis",
+              "textShadow": "0px 0px 1px #ffffff",
+              "textTransform": "capitalize",
+              "whiteSpace": "nowrap",
+              "width": "160px",
+            }
+          }
+        >
+          Two
+        </div>
+        <div
+          style={
+            Object {
+              "background": "linear-gradient(rgba(255, 255, 255, 0.32) 0%, rgba(234, 234, 234, 0.12) 9%, rgba(218, 218, 218, 0.34) 100%)",
+              "borderRadius": "5px",
+              "boxShadow": "rgba(0, 0, 0, 0.26) 0px 1px 3px -1px inset",
+              "flexGrow": "1",
+              "height": "12px",
+              "margin": "0",
+              "overflow": "hidden",
+              "padding": "0",
+              "width": "50px",
+            }
+          }
+        >
+          <div
+            style={
+              Object {
+                "background": "linear-gradient(rgb(192, 194, 208) 0%, rgb(149, 138, 208) 100%)",
+                "borderRadius": "2px",
+                "boxShadow": "rgba(0, 0, 0, 0.24) 0px 1px 0px 0px",
+                "height": "13px",
+                "margin": "0",
+                "padding": "0",
+                "width": "25%",
+              }
+            }
+          />
+        </div>
+        <div
+          style={
+            Object {
+              "color": "rgba(34, 32, 62, 0.760784)",
+              "fontFamily": "Open Sans",
+              "fontSize": "11.6px",
+              "fontWeight": "600",
+              "height": "35px",
+              "letterSpacing": "0.2px",
+              "lineHeight": "35px",
+              "margin": "-1px 0px 0px 0px",
+              "padding": "0px 0px 0px 10px",
+              "textShadow": "0px 0px 1px #ffffff",
+              "textTransform": "capitalize",
+              "width": "20px",
+            }
+          }
+        >
+          25
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Default Ranking 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "display": "inline-block",
+        "float": "left",
+        "margin": "0px 0px 0px 0px",
+        "overflowX": "hidden",
+        "padding": "0px 0px 0px 0px",
+      }
+    }
+  >
+    <h3
+      style={
+        Object {
+          "color": "rgba(89, 83, 93, 0.8)",
+          "fontFamily": "Open Sans",
+          "fontSize": "12.2px",
+          "fontWeight": 600,
+          "letterSpacing": "0.2px",
+          "lineHeight": "18px",
+          "margin": "0px 0px 0px 0px",
+          "padding": "15px 0px 1px 26px",
+          "textShadow": "white 0px 0px 1px",
+          "textTransform": "uppercase",
+        }
+      }
+    >
+      
+    </h3>
+    <div
+      style={
+        Object {
+          "margin": "5px 8%",
+          "padding": "10px 15px",
+        }
+      }
+    />
+  </div>
+</div>
+`;

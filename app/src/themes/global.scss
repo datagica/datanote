@@ -1,0 +1,192 @@
+html {
+  background: linear-gradient(to bottom right, #d5cfd7 1%,#c0c4d1 100%);
+}
+
+body {
+  margin: 0px !important;
+  padding: 0px;
+
+  -webkit-app-region: drag !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+
+  height: 100vh;
+
+  font-family: 'Roboto', 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  text-shadow: 0px 0px 1px rgb(255, 255, 255);
+  color: rgb(48, 53, 76);
+}
+
+button {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+
+button, a, select, canvas {
+  -webkit-app-region: no-drag !important;
+}
+
+
+// disable the default outline. we should either use none, or a custom one
+*:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+// disable the specific pointer, to make it more native
+// it makes sense for the Desktop version of the app, but for the web app
+// version we should probably let the browser choose
+div:hover, span:hover,p:hover, a:hover {
+  cursor: default !important;
+}
+
+// TODO replace by material-ui next, see https://github.com/callemall/material-ui/issues/4066
+// we will be able to do '&:hover': { opacity: 1 }
+// until then we can use this trick
+.hovertrick:hover {
+  opacity: 1 !important;
+}
+
+
+/* welcome to the marvelous world of hacks */
+.nestedItemInnerDivMulti > div {
+  padding: 0px !important;
+}
+
+.toolbar-actions{
+
+
+  > span {
+    width: 50%;
+    flex: 1;
+    // display: inline-block;
+    // text-align: center;
+
+    &:first-child{
+      //text-align: left;
+      // float: left;
+    //  width: 25%;
+    }
+
+    &:last-child{
+      text-align: right;
+      float: right;
+      width: 25%;
+    }
+  }
+
+}
+
+// note: maybe this is causing issues..
+.myDrop {
+  display: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  transition: all 0.50s ease-out;
+}
+
+.blur {
+-webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+
+tr.selected {
+  background-color : rgba(189, 183, 236, 0.41);
+}
+
+.mfb-component__wrap{
+  .mfb-component__child-icon,
+  .mfb-component__icon,
+  .mfb-component__main-icon--active,
+  .mfb-component__main-icon--resting {
+    font-size: 24px;
+    line-height: 59px;
+  }
+  .mfb-component__button, .mfb-component__button--child, .mfb-component__button--main{
+    background-color: #7C6DA5;
+    &:hover{
+      background-color: #8471B6;
+    }
+  }
+  [data-mfb-label]:after{
+    background: rgba(108, 103, 144, 0.49);
+    padding: 4px 10px;
+    border-radius: 8px;
+    color: hsla(0, 100%, 100%, 0.97);
+    border: solid 0px #868686;
+    box-shadow: 0px 2px 1px 0px rgba(62, 59, 84, 0.49);
+    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.42);
+    font-size: 10px;
+    font-family: Roboto;
+    letter-spacing: 0.6px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
+
+// necessary until this is done: https://github.com/callemall/material-ui/issues/4420
+.customTabs > div {
+  background: linear-gradient(rgba(241, 241, 241, 0.52) 0%, rgba(255, 255, 255, 0.48) 100%) !important;
+  box-shadow: 0px 2px 6px -3px rgba(0, 0, 0, 0.29) !important;
+  > button {
+    width: auto !important;
+    padding: 0px 35px !important;
+  }
+}
+
+.rc-slider-step {
+  background: #dee2f3;
+  box-shadow: inset 0px 0px 5px -1px rgba(0, 0, 0, 0.80);
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar-thumb {
+  background: hsla(248, 12%, 59%, 0.3);
+  border: 0px none rgba(255, 255, 255, 0.8);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsla(248, 12%, 59%, 0.4);
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar-thumb:active {
+  background: hsla(248, 12%, 59%, 0.5);
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar-track {
+  background: rgba(66, 63, 74, 0.05);
+  border: solid 1px rgba(255, 255, 255, 0);
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar-track:hover {
+  background: rgba(66, 63, 74, 0.1);
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar-track:active {
+  background: rgba(66, 63, 74, 0.17);
+  transition: all 0.3s ease;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+  transition: all 0.3s ease;
+}
