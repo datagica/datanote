@@ -2,7 +2,7 @@ const path = require('path')
 const argv = require('./argv')
 const parentDirName = path.dirname(process.mainModule.filename).split(path.delimiter).pop()
 
-function getAppRoot(unpacked) {
+function getAppRoot (unpacked) {
 
   // get out of the "utils/" directory
   const appRoot = path.resolve(__dirname, path.join(".."))

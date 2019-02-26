@@ -1,7 +1,7 @@
 
 appId: com.datagica.datanote
 productName: Datanote
-copyright: Copyright © 2017 Julian Bilcke <julian.bilcke@datagica.com>
+copyright: Copyright © 2017-2018 Julian Bilcke <julian.bilcke@datagica.com>
 compression: store
 
 asarUnpack:
@@ -11,7 +11,7 @@ asarUnpack:
 
 forceCodeSigning: true
 npmRebuild: true
-nodeGypRebuild: false
+nodeGypRebuild: true
 
 mac:
   publish: []

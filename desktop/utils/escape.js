@@ -1,5 +1,5 @@
 
 
-module.exports = function escape(str) {
+export default function escape (str) {
   return str.replace(/\\/gi, "\\\\")
 }

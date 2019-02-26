@@ -1,4 +1,4 @@
-const electron = require('electron')
+import electron from 'electron'
 const { app } = electron
 
 function quitNow(errorCode) {
@@ -11,7 +11,7 @@ function quitNow(errorCode) {
   }, 2000)
 }
 
-function quitter(context) {
+export default function quitter (context) {
 
   return function(msg, errorCode) {
 
@@ -53,5 +53,3 @@ function quitter(context) {
   }
 
 }
-
-module.exports = quitter

@@ -1,14 +1,14 @@
-const path = require('path')
-const electron = require('electron')
+import path from 'path'
+import electron from 'electron'
 const { BrowserWindow, ipcMain } = electron
 
-const electronDebug = require('electron-debug')
+import electronDebug from 'electron-debug'
 
-const argv          = require('./argv')
-const escape        = require('./escape')
-const getAppRoot    = require('./appRoot')
-// const analytics     = require('./analytics')
-const saveDialog    = require('./saveDialog')
+import argv from './argv'
+import escape from './escape'
+import getAppRoot from './appRoot'
+// import analytics from './analytics'
+import saveDialog from './saveDialog'
 
 // http://electron.atom.io/docs/api/browser-window/
 
@@ -56,7 +56,7 @@ const WIN_OPTIONS = {
   }
 }
 
-async function getMainWindow (settings) {
+export default async function getMainWindow (settings) {
 
 	const mainWindow = new electron.BrowserWindow(
     argv['2nd']
@@ -155,4 +155,3 @@ async function getMainWindow (settings) {
 	return mainWindow
 }
 
-module.exports = getMainWindow

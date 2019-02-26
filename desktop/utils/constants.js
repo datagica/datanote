@@ -1,12 +1,12 @@
 
 // some constants
 const constants = {
-  apiUrl: 'wss://beta-api.datanote.io',
+  apiUrl: 'ws://localhost:8979', // 'wss://beta-api.datanote.io',
   enabledSources: [
-    '@datagica/backend-source-api',
+     // '@datagica/backend-source-api',
     '@datagica/backend-source-filesystem',
-    '@datagica/backend-source-database',
-    '@datagica/backend-source-social',
+    // '@datagica/backend-source-database',
+    // '@datagica/backend-source-social',
     '@datagica/backend-source-note',
     // '@datagica/backend-source-web',
     // '@datagica/backend-source-bigdata',

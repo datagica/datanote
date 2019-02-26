@@ -1,10 +1,10 @@
 
-const fetch = require('node-fetch')
+import fetch from 'node-fetch'
 
 // store stuff
-const freeStorePlugins    = {};
-const premiumStorePlugins = {};
-const downloadedPlugins   = {};
+const freeStorePlugins    = {}
+const premiumStorePlugins = {}
+const downloadedPlugins   = {}
 
 
 const runningInstances = {

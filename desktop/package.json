@@ -11,7 +11,7 @@
     "url": "git+ssh://git@bitbucket.org/datagica/datanote.git"
   },
   "engines": {
-    "node": "8"
+    "node": "10"
   },
   "scripts": {
     "app": "npm i && cd ../app && npm i && npm run build && cd ../desktop",
@@ -19,6 +19,7 @@
     "open": "node_modules/.bin/electron . --2nd",
     "pack": "npm run build-here",
     "build-here": "npm run app && ./node_modules/.bin/build && npm test",
+    "build": "./node_modules/.bin/build --mac --win --linux",
     "build-all": "npm run app && ./node_modules/.bin/build --mac --win --linux && test",
     "test": "node_modules/.bin/ava",
     "test-app": "cd ../app && npm i && npm test && cd ../desktop",
@@ -40,11 +41,12 @@
     "research intelligence"
   ],
   "dependencies": {
+    "@datagica/backend-source-cache": "^0.0.0",
+    "@datagica/backend-source-note": "^0.0.0",
+    "@datagica/datanote-api-server": "^0.0.1",
     "@datagica/datanote-desktop-engine": "^0.0.20",
     "@datagica/local-settings": "^0.0.0",
     "@datagica/orientdb-server": "^3.0.0-m2",
-    "@datagica/backend-source-cache": "^0.0.0",
-    "@datagica/backend-source-note": "^0.0.0",
     "@datagica/process-pool": "^0.0.0",
     "about-window": "^1.12.1",
     "appdirectory": "^0.1.0",
@@ -56,7 +58,7 @@
     "electron-lets-move": "^0.0.5",
     "electron-plugins": "^0.1.0",
     "electron-react-devtools": "^0.5.3",
-    "electron-updater": "^3.1.2",
+    "electron-updater": "^4.0.6",
     "endpoint-utils": "^1.0.2",
     "json-stringify-safe": "^5.0.1",
     "lodash": "^4.17.11",
@@ -64,27 +66,27 @@
     "minimist": "^1.2.0",
     "node-notifier": "^5.2.1",
     "opn": "5.4.0",
-    "react-hot-loader": "next"
+    "react-hot-loader": "4.7.1"
   },
   "bundledDependencies": {},
   "devDependencies": {
-    "ava": "^0.25.0",
+    "ava": "^1.2.1",
     "babel-preset-es2017-node7": "^0.5.2",
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "devtron": "^1.4.0",
-    "electron-builder": "^20.28.4",
+    "electron-builder": "^20.33.2",
     "electron-compilers": "^5.9.0",
     "electron-osx-sign": "^0.4.10",
-    "electron-packager": "^12.2.0",
-    "electron-prebuilt-compile": "^3.0.2",
+    "electron-packager": "^13.1.0",
+    "electron-prebuilt-compile": "^4.0.0",
     "enzyme": "^3.7.0",
     "node-horseman": "^3.3.0",
     "phantomjs-prebuilt": "^2.1.16",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "spectron": "^4.0.0",
-    "xo": "^0.23.0"
+    "spectron": "^5.0.0",
+    "xo": "^0.24.0"
   },
   "eslintConfig": {
     "extends": [

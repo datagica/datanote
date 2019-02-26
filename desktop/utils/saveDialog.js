@@ -1,5 +1,5 @@
-const { app, dialog } = require('electron')
-
+import electron from 'electron'
+const { app, dialog } = electron
 
 /**
 {
@@ -12,7 +12,7 @@ const { app, dialog } = require('electron')
   showsTagField:  Boolean (optional) macOS - Show the tags input box, defaults to true.
 
 */
-function saveDialog(browserWindow, options) {
+export default function saveDialog (browserWindow, options) {
   options = options instanceof Object ? options : {}
   return new Promise((resolve, reject) => {
     console.log("calling dialog.showSaveDialog")
@@ -37,4 +37,3 @@ function saveDialog(browserWindow, options) {
   })
 }
 
-module.exports = saveDialog

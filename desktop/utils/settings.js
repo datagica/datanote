@@ -1,10 +1,10 @@
-const fs            = require('fs')
-const path          = require('path')
+const fs = require('fs')
+const path = require ('path')
 const LocalSettings = require('@datagica/local-settings')
-const argv          = require('./argv')
-const getAppRoot    = require('./appRoot')
+const argv = require ('./argv')
+const getAppRoot = require ('./appRoot')
 
-function getSettings() {
+function getSettings () {
   // console.log("argv: "+JSON.stringify(argv))
   const domain = typeof argv.domain === 'string' ? argv.domain : 'detective'
   // const api = typeof argv.api === 'string' ? argv.api : 'wss://beta-api.datanote.io'

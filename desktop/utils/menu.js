@@ -1,10 +1,9 @@
-'use strict';
+'use strict'
+import path from 'path'
+import electron from 'electron'
+const {remote, dialog, nativeImage} = electron
 
-const {remote, dialog, nativeImage} = require('electron');
-
-const path = require('path');
-
-const appName = remote.app.getName();
+const appName = remote.app.getName()
 
 const template = [{
   label: 'Edit',

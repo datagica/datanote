@@ -12,4 +12,5 @@ args.devel = Boolean(
     : parentDir.match(/[\/\\]desktop(?:[\/\\]node_modules[\/\\]electron-prebuilt-compile[\/\\]lib[\/\\])?/gi)
 )
 
+// cannot use export here because it will be called from browser code!
 module.exports = args

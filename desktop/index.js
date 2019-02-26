@@ -1,22 +1,23 @@
 'use strict'
 
-const electron = require('electron')
+import electron from 'electron'
 const { app, ipcMain } = electron
 
 // native modules
-const notifier      = require('node-notifier')
-const opn           = require('opn')
-const getFreePort   = require('endpoint-utils').getFreePort
+import notifier from 'node-notifier'
+import opn from 'opn'
+import { getFreePort } from 'endpoint-utils'
 
 // our own utilities
-const getSettings     = require('./utils/settings')
-const getDatabase     = require('./utils/database')
-const getToolbar      = require('./utils/toolbar')
-const getMainWindow   = require('./utils/mainWindow')
-const getAutoUpdater  = require('./utils/autoUpdater')
-const watcher         = require('./utils/watcher')
-const quitter         = require('./utils/quitter')
-const alreadyRunning  = require('./utils/alreadyRunning')
+import getSettings from './utils/settings'
+import getDatabase from './utils/database'
+import getDatanoteApi from './utils/datanoteApi'
+import getToolbar from './utils/toolbar'
+import getMainWindow from './utils/mainWindow'
+import getAutoUpdater from './utils/autoUpdater'
+import watcher from './utils/watcher'
+import quitter from './utils/quitter'
+import preventMultipleInstances from './utils/preventMultipleInstances'
 
 ////////////////////////////////////////////////////////////////////////////////
 
@@ -66,9 +67,14 @@ async function startApp (settings) {
 
 async function main () {
 
-  process.on('exit',                      () => quit("operating system asked us to leave"))
-  process.on('SIGINT',                    () => quit("received a SIGINT"))
-  app.on('window-all-closed',             () => quit("user closed all windows"))
+  const lock = preventMultipleInstances(context)
+  if (!lock) {
+    return quit("Datanote is already running")
+  }
+
+  process.on('exit', () => quit("operating system asked us to leave"))
+  process.on('SIGINT', () => quit("received a SIGINT"))
+  app.on('window-all-closed', () => quit("user closed all windows"))
   app.on('activate-with-no-open-windows', () => {
     console.log("activate with no open windows => what should we do?")
     // if (!context.mainWindow) { context.mainWindow = getMainWindow() }
@@ -77,18 +83,16 @@ async function main () {
   try {
     const settings = await getSettings()
     const port = await getFreePort()
+  
+    await getDatanoteApi(settings)
+
     context.db = getDatabase(settings, port)
     await context.db.start()
+
     await startApp(settings)
   } catch (err) {
     quit(err, 1)
   }
 }
 
-////////////////////////////////////////////////////////////////////////////////
-
-if (alreadyRunning(context)) {
-  quit("Datanote is already running")
-} else {
-  main()
-}
+main()

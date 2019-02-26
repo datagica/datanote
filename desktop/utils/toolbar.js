@@ -1,7 +1,7 @@
-const menubar    = require('menubar')
-const getAppRoot = require('./appRoot')
+import menubar from 'menubar'
+import getAppRoot from './appRoot'
 
-function getToolbar () {
+export default function getToolbar () {
 
 	const dir = `file://${getAppRoot()}/html`
 
@@ -28,10 +28,10 @@ function getToolbar () {
 		//showDockIcon: false, // (default false) - Configure the visibility of the application dock icon.
 		//showOnRightClick: false, // (default false) - Show the window on 'right-click' event instead of regular 'click'
 
-	});
+	})
 
 	mb.on('ready', () => {
-	  console.log('menu is ready');
+	  console.log('menu is ready')
 
 	  // your menu bar code here
 
@@ -49,7 +49,5 @@ function getToolbar () {
 		*/
 	})
 
-  return mb;
+  return mb
 }
-
-module.exports = getToolbar

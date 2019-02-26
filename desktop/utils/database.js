@@ -1,10 +1,10 @@
-const path       = require('path')
-const OrientDB   = require('@datagica/orientdb-server')
-const argv       = require('./argv')
-const getAppRoot = require('./appRoot')
-const constants  = require('./constants')
+import path from 'path'
+import OrientDB from '@datagica/orientdb-server'
+import argv from './argv'
+import getAppRoot from './appRoot'
+import constants from './constants'
 
-function getDatabase(settings, port) {
+export default function getDatabase (settings, port) {
 
   // console.log('settings: ', settings)
   // console.log('database: ', JSON.stringify(settings.get('database')))
@@ -45,5 +45,3 @@ function getDatabase(settings, port) {
 
   return new OrientDB(orientDbConfig)
 }
-
-module.exports = getDatabase

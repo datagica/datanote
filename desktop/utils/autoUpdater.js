@@ -2,7 +2,7 @@ const os = require('os')
 const electron = require('electron')
 const { app, autoUpdater } = electron
 
-function getAutoUpdater(urlPrefix) {
+export default function getAutoUpdater (urlPrefix) {
 
   autoUpdater.on('checking-for-update', () => {
     console.log("checking-for-update");
@@ -37,5 +37,3 @@ function getAutoUpdater(urlPrefix) {
   	//process.exit(1)
   }
 }
-
-module.exports = getAutoUpdater
